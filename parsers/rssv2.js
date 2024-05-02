@@ -70,6 +70,7 @@ const getChannelImage = (node) => {
 };
 
 const getItemTitle = (node) => utils.getElementTextContent(node, 'title');
+const getItemImage = (node) => utils.getElementTextContent(node, 'image');
 
 const getItemLinks = (node) => {
   const links = utils.getChildElements(node, 'link');
@@ -159,6 +160,7 @@ const mapItems = (document) => {
     description: getItemDescription(item),
     content: getItemContent(item),
     id: getItemId(item),
+    image: getItemImage(item),
     authors: getItemAuthors(item),
     categories: getItemCategories(item),
     published: getItemPublished(item),
